@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumiya Spark - Live Stage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .glass { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2); }
+      .gold-sparkle { background: linear-gradient(45deg, #ffd700, #ffae00); box-shadow: 0 0 25px rgba(255, 215, 0, 0.5); }
+      .animate-slow-zoom { animation: zoom 20s infinite alternate; }
+      @keyframes zoom { from { transform: scale(1); } to { transform: scale(1.1); } }
+      .text-glow { text-shadow: 0 2px 12px rgba(0,0,0,1), 0 0 6px rgba(0,0,0,1); }
+    </style>
+</head>
+<body class="bg-black text-white font-sans overflow-hidden">
+    <div class="absolute inset-0 z-[-1] overflow-hidden">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-30 animate-slow-zoom">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-gold-and-blue-particles-2365-large.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20 relative">
+        <div class="mb-4 px-4 py-2 glass rounded-full text-xs uppercase tracking-[0.3em] text-yellow-300 font-bold text-glow">
+            Live Phase 01: Stage Ready
+        </div>
+        <h1 class="text-6xl md:text-9xl font-black mb-3 tracking-tighter italic drop-shadow-2xl uppercase text-glow">
+            SUMIYA <span class="text-yellow-400">SPARK</span>
+        </h1>
+        <p class="text-sm md:text-xl mb-10 text-gray-100 font-semibold tracking-[0.5em] uppercase text-glow">
+            Professional AI Music Engine
+        </p>
+        <button id="joinStageBtn" class="gold-sparkle px-12 py-4 md:px-16 md:py-5 rounded-full text-black font-black text-lg md:text-xl uppercase tracking-widest hover:scale-105 transition-all active:scale-95">
+            Join Stage 🚀
+        </button>
+        <div class="absolute bottom-10 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl px-4">
+            <div class="glass p-3 rounded-lg">
+                <p class="text-xs text-gray-200 uppercase text-glow">Visuals</p>
+                <p class="text-sm font-bold uppercase text-white text-glow">4K Cinematic</p>
+            </div>
+            <div class="glass p-3 rounded-lg">
+                <p class="text-xs text-gray-200 uppercase text-glow">Audio</p>
+                <p class="text-sm font-bold uppercase text-white text-glow">Hi-Fidelity</p>
+            </div>
+            <div class="glass p-3 rounded-lg">
+                <p class="text-xs text-gray-200 uppercase text-glow">Engine</p>
+                <p class="text-sm font-bold uppercase text-white text-glow">AI Powered</p>
+            </div>
+            <div class="glass p-3 rounded-lg">
+                <p class="text-xs text-gray-200 uppercase text-glow">Latency</p>
+                <p class="text-sm font-bold uppercase text-white text-glow">Zero Delay</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
